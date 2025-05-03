@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "Archivo", sans-serif;
+}
+main {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    // border-radius: 15px;
+
+    input {
+      padding: 12px;
+      border: none;
+      background-color: aliceblue;
+      outline: none;
+    }
+    .input {
+      flex: 1;
+    }
+    .input::placeholder {
+      text-transform: capitalize;
+    }
+    .btn {
+      text-transform: capitalize;
+      background-color: lightskyblue;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  section {
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background-color: aliceblue;
+      padding: 20px;
+      border-radius: 5px;
+
+      .userdetails {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      img {
+        width: 100px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .userinfo {
+        flex-grow: 1;
+
+        h1 {
+          font-size: 1.2rem;
+          font-weight: 400;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      .bio {
+        p,
+        span {
+          font-size: 0.9rem;
+        }
+      }
+      .userfollowers {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          display: flex;
+          flex-direction: column;
+        }
+        span {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .repo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    .repo_data {
+      background-color: lavender;
+      padding: 10px 5px;
+      border-radius: 5px;
+
+      h1 {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      a {
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+
+    section {
+      .info {
+        gap: 20px;
+
+        .userdetails {
+          gap: 20px;
+
+          img {
+            width: 150px;
+            aspect-ratio: 1/1;
+          }
+        }
+      }
+    }
+    .repo {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+
+    section {
+      .info {
+        gap: 30px;
+        .userdetails {
+          gap: 50px;
+
+          img {
+            width: 200px;
+            aspect-ratio: 1/1;
+          }
+        }
+      }
+    }
+    .repo {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

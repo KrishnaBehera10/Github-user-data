@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Archivo", sans-serif;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+main form {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+main form input {
+  padding: 12px;
+  border: none;
+  background-color: aliceblue;
+  outline: none;
+}
+main form .input {
+  flex: 1;
+}
+main form .input::placeholder {
+  text-transform: capitalize;
+}
+main form .btn {
+  text-transform: capitalize;
+  background-color: lightskyblue;
+  color: white;
+  cursor: pointer;
+}
+main section .info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 5px;
+}
+main section .info .userdetails {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+main section .info img {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+main section .info .userinfo {
+  flex-grow: 1;
+}
+main section .info .userinfo h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+main section .info .userinfo p {
+  font-size: 0.9rem;
+}
+main section .info .bio p,
+main section .info .bio span {
+  font-size: 0.9rem;
+}
+main section .info .userfollowers {
+  display: flex;
+  justify-content: space-between;
+}
+main section .info .userfollowers p {
+  display: flex;
+  flex-direction: column;
+}
+main section .info .userfollowers span {
+  text-align: center;
+}
+main .repo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+main .repo .repo_data {
+  background-color: lavender;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+main .repo .repo_data h1 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+main .repo .repo_data a {
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+  }
+  main section .info {
+    gap: 20px;
+  }
+  main section .info .userdetails {
+    gap: 20px;
+  }
+  main section .info .userdetails img {
+    width: 150px;
+    aspect-ratio: 1/1;
+  }
+  main .repo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+  }
+  main section .info {
+    gap: 30px;
+  }
+  main section .info .userdetails {
+    gap: 50px;
+  }
+  main section .info .userdetails img {
+    width: 200px;
+    aspect-ratio: 1/1;
+  }
+  main .repo {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}/*# sourceMappingURL=style.css.map */
