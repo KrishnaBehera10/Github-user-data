@@ -3,6 +3,8 @@ let section = document.querySelector("section");
 let repo = document.querySelector(".repo");
 btn.addEventListener("click", (e) => {
   e.preventDefault();
+  repo.innerHTML = "";
+  section.innerHTML = "";
   let input = document.querySelector(".input").value;
   if (input) {
     let data = fetch(`https://api.github.com/users/${input}`);
@@ -16,7 +18,6 @@ btn.addEventListener("click", (e) => {
       })
       .then((data) => {
         let element = document.createElement("div");
-        section.innerHTML = "";
         element.classList.add("info");
         element.innerHTML = `<div class="userdetails">
             <img
@@ -49,8 +50,6 @@ btn.addEventListener("click", (e) => {
             }
           })
           .then((data) => {
-            console.log(data);
-            repo.innerHTML = "";
             data.forEach((element) => {
               let repoelement = document.createElement("div");
               repoelement.classList.add("repo_data");
